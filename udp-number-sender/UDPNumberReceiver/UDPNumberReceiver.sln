@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPNumberReceiver", "UDPNumberReceiver\UDPNumberReceiver.csproj", "{20551C22-B675-4DEC-9F68-A2CCC9C7813D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20551C22-B675-4DEC-9F68-A2CCC9C7813D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20551C22-B675-4DEC-9F68-A2CCC9C7813D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20551C22-B675-4DEC-9F68-A2CCC9C7813D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20551C22-B675-4DEC-9F68-A2CCC9C7813D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D777B2B0-3FDF-40AF-BB80-3A86473C02C3}
+	EndGlobalSection
+EndGlobal
