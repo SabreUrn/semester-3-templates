@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace RESTConsumer {
 	public static class CRUD {
-		private static string class1Uri = "http://localhost:26649/Service1.svc/customers/";
-		private static string class1UriQuery = "http://localhost:26649/Service1.svc/customers?id=";
+		private static string class1Uri = "http://localhost:14194/Service1.svc/class1/";
+		private static string class1UriQuery = "http://localhost:14194/Service1.svc/class1?id=";
 
 		public static async Task<IList<Class1>> GetClass1sAsync() {
 			using (HttpClient client = new HttpClient()) {
-				string content = await client.GetStringAsync(class1Uri + "/");
+				string content = await client.GetStringAsync(class1Uri);
 				IList<Class1> c1List = JsonConvert.DeserializeObject<IList<Class1>>(content);
 				return c1List;
 			}

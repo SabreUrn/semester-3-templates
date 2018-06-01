@@ -10,8 +10,25 @@ namespace RESTProvider {
 	[ServiceContract]
 	public interface IService1 {
 
-		//[OperationContract]
+		[OperationContract]
+		[WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, UriTemplate = "class1/")]
+		IList<Class1> GetClass1s();
 
+		[OperationContract]
+		[WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, UriTemplate = "class1?id={id}")]
+		Class1 GetClass1(int id);
+
+		[OperationContract]
+		[WebInvoke(Method = "DELETE", ResponseFormat = WebMessageFormat.Json, UriTemplate = "class1?id={id}")]
+		void DeleteClass1(int id);
+
+		[OperationContract]
+		[WebInvoke(Method = "PUT", ResponseFormat = WebMessageFormat.Json, UriTemplate = "class1/")]
+		void PutClass1(Class1 customer);
+
+		[OperationContract]
+		[WebInvoke(Method = "POST", ResponseFormat = WebMessageFormat.Json, UriTemplate = "class1/")]
+		void UpdateClass1(Class1 customer);
 	}
 
 

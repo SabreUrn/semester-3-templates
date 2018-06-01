@@ -20,22 +20,22 @@ namespace RESTConsumer {
 
 		private static string Title() {
 			string s = "";
-			s += AddWithNewLine("Class1 REST consumer");
-			s += AddWithNewLine("--------------------");
-			s += NewLine();
+			s += MenuCRUDHelper.AddWithNewLine("Class1 REST consumer");
+			s += MenuCRUDHelper.AddWithNewLine("--------------------");
+			s += MenuCRUDHelper.NewLine();
 			return s;
 		}
 
 		private static string Options() {
 			string s = "";
-			s += AddWithNewLine("1. GET all objects from service");
-			s += AddWithNewLine("2. GET one objects from service");
-			s += AddWithNewLine("3. DELETE object from service");
-			s += AddWithNewLine("4. POST object to service");
-			s += AddWithNewLine("5. PUT object to service");
-			s += AddWithNewLine("Press enter to exit.");
-			s += NewLine();
-			s += Add("Choose option: ");
+			s += MenuCRUDHelper.AddWithNewLine("1. GET all objects from service");
+			s += MenuCRUDHelper.AddWithNewLine("2. GET one objects from service");
+			s += MenuCRUDHelper.AddWithNewLine("3. DELETE object from service");
+			s += MenuCRUDHelper.AddWithNewLine("4. POST object to service");
+			s += MenuCRUDHelper.AddWithNewLine("5. PUT object to service");
+			s += MenuCRUDHelper.AddWithNewLine("Press enter to exit.");
+			s += MenuCRUDHelper.NewLine();
+			s += MenuCRUDHelper.Add("Choose option: ");
 			return s;
 		}
 
@@ -45,18 +45,23 @@ namespace RESTConsumer {
 			switch(response.Key) {
 				case ConsoleKey.D1:
 					Console.WriteLine(MenuCRUDHelper.GetAll());
+					PauseForInput();
 					break;
 				case ConsoleKey.D2:
 					Console.WriteLine(MenuCRUDHelper.GetOne());
+					PauseForInput();
 					break;
 				case ConsoleKey.D3:
 					Console.WriteLine(MenuCRUDHelper.Delete());
+					PauseForInput();
 					break;
 				case ConsoleKey.D4:
 					Console.WriteLine(MenuCRUDHelper.Post());
+					PauseForInput();
 					break;
 				case ConsoleKey.D5:
 					Console.WriteLine(MenuCRUDHelper.Put());
+					PauseForInput();
 					break;
 				case ConsoleKey.Enter:
 					run = false;
@@ -67,20 +72,9 @@ namespace RESTConsumer {
 			return run;
 		}
 
-		private static string Add(string s) {
-			return s;
-		}
-		
-		private static string AddWithNewLine(string s) {
-			return s + NewLine();
-		}
-
-		private static string NewLine() {
-			return "\r\n";
-		}
-
-		private static string FormatObject(Class1 c1) {
-			return $"#{c1.Id}: ";
+		private static void PauseForInput() {
+			Console.WriteLine("Press any key to continue.");
+			Console.ReadKey();
 		}
 	}
 }
