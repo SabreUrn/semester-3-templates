@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        table,
+        th,
+        td {
+            
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Optankningsliste</h2>
+    <table style="width:50%">
+        <tr>
+            <th>Unik Id</th>
+            <th>Kundenummer</th>
+            <th>Antal liter</th>
+        </tr>
+        <%refuels.forEach(function(optankning) {%>
+            <tr>
+                <td>
+                    <%= optankning.UnikId %>
+                </td>
+                <td>
+                    <%= optankning.KundeNr %>
+                </td>
+                <td>
+                    <%= optankning.AntalLiter %>
+                </td>
+            </tr>
+        <%})%>
+        </table>
+</body>
+    </html>

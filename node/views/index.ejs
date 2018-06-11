@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <p><a href="refuels">Se alle optankninger</a></p>
+    <br>
+    <br>
+    <form action="/refuelsingle" method="GET">
+        <input type="number" name="kundenr" placeholder="kundenummer"><br>
+        <input type="submit" value="Hent optankninger for kundenummer">
+    </form>
+    <br>
+    <br>
+    <form action="/insertrefuel" method="POST">
+        <input type="number" name="unikid" placeholder="unik id"><br>
+        <input type="number" name="kundenr" placeholder="kundenummer"><br>
+        <input type="number" step="0.001" name="antalliter" placeholder="antal liter"><br>
+        <input type="submit" value="Indsæt ny optankning">
+    </form>
+</body>
+</html>
